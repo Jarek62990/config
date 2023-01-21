@@ -11,7 +11,7 @@ services:
       DB_USER: ${DB_USER:-BE_62990}
       DB_SERVER: ${DB_SERVER:-actina15.maas}
       DB_PREFIX: ${DB_PREFIX:-ps_}
-      PS_DOMAIN: ${PS_DOMAIN:-localhost:9099}
+      PS_DOMAIN: ${PS_DOMAIN:-localhost:2990}
       PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-installtrio}
       PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admintrio}
       PS_COUNTRY: ${PS_COUNTRY:-pl}
