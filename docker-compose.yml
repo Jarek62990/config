@@ -6,7 +6,7 @@ services:
     environment:
       DISABLE_MAKE: 1
       PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
-      DB_PASSWD: BE_629900_pwd
+      DB_PASSWD: BE_62990_pwd
       DB_NAME: BE_62990
       DB_USER: BE_62990
       DB_SERVER: actina15.maas
