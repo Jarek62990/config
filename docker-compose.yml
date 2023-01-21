@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  prestashop:
+    image: pirawi/trioshop
+    environment:
+      DISABLE_MAKE: 1
+      PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
+      DB_PASSWD: BE_629900_pwd
+      DB_NAME: BE_62990
+      DB_USER: BE_62990
+      DB_SERVER: actina15.maas
+      DB_PREFIX: ${DB_PREFIX:-ps_}
+      PS_DOMAIN: ${PS_DOMAIN:-localhost:8001}
+      PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-install-dev}
+      PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
+      PS_COUNTRY: ${PS_COUNTRY:-fr}
+      PS_LANGUAGE: ${PS_LANGUAGE:-fr}
+      PS_DEV_MODE: ${PS_DEV_MODE:-0}
+      ADMIN_MAIL: ${ADMIN_MAIL:-demo@prestashop.com}
+      ADMIN_PASSWD: ${ADMIN_PASSWD:-prestashop_demo}
+    ports:
+      - "2990:80"
+      - "2991:443"
+    networks:
+      - admin-mysql_default
+    configs:
+      - source: parameters.php
+        target: /var/www/html/app/config/parameters.php
+
+configs:
+  parameters.php:
+    file: ./config/parameters.php
+
+networks:
+  admin-mysql_default:
+    external:
+      name: admin-mysql_default
