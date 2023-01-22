@@ -2,13 +2,9 @@
   'parameters' =>
   array (
     'database_host' => '127.0.0.1',
-    'database_port' => '',
+    'database_port' => '3306',
     'database_name' => 'BE_62990',
-    //'database_name' => 'prestashop',
     'database_user' => 'BE_62990',
-    //'database_user' => 'root',
-    //'database_password' => 'Pre$T@$00P!',
-    //'database_password' => '',
     'database_password' => 'BE_62990_pwd',
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
